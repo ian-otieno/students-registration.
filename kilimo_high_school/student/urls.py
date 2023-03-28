@@ -1,7 +1,8 @@
 from django.urls import path
 from . import views
-from.views import create_stream, delete_stream,
+from.views import create_stream, delete_stream
 urlpatterns = [
+    path('', views.home, name='home'),
     path('', views.student_list, name='base'),
     path('streams/', views.stream_list, name='list_streams'),
     path('streams/<int:pk>/', views.stream_detail, name='stream_detail'),

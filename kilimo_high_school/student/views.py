@@ -2,6 +2,9 @@
 from django.shortcuts import render, redirect
 from .models import Stream, Student
 
+def home(request):
+    return render(request, 'home.html')
+
 def stream_list(request):
     streams = Stream.objects.all()
     return render(request, 'streams.html', {'streams': streams})
